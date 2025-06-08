@@ -43,30 +43,30 @@ def busqueda_binaria_con_contador(lista, objetivo):
 
 # 2. FLUJO PRINCIPAL DEL ANÁLISIS TEÓRICO
 # ----------------------------------------
-if __name__ == "__main__":
+# (Todo el código de aquí en adelante fue movido un nivel a la izquierda)
 
-    tamaños_a_probar = [10, 100, 1000, 10000, 100000]
+tamaños_a_probar = [10, 100, 1000, 10000, 100000]
 
-    # Imprimimos la cabecera de nuestra tabla de resultados
-    print(f"{'='*90}")
-    print(f"| {'Tamaño Lista':<15} | {'B. Lineal (Op.)':<20} | {'B. Binaria (Op.)':<20} | {'Complejidad Teórica':<25} |")
-    print(f"|{'-'*17}|{'-'*22}|{'-'*22}|{'-'*27}|")
+# Imprimimos la cabecera de nuestra tabla de resultados
+print(f"{'='*67}")
+print(f"| {'Tamaño Lista':<15} | {'B. Lineal (Op.)':<20} | {'B. Binaria (Op.)':<20} |")
+print(f"|{'-'*17}|{'-'*22}|{'-'*22}|")
 
-    for tamaño in tamaños_a_probar:
-        # Generamos una lista QUE YA ESTÁ ORDENADA
-        lista_ordenada = sorted([random.randint(0, tamaño * 10) for _ in range(tamaño)])
-        objetivo = random.choice(lista_ordenada) # Elegimos un objetivo que sabemos que existe
+for tamaño in tamaños_a_probar:
+    # Generamos una lista QUE YA ESTÁ ORDENADA
+    lista_ordenada = sorted([random.randint(0, tamaño * 10) for _ in range(tamaño)])
+    objetivo = random.choice(lista_ordenada) # Elegimos un objetivo que sabemos que existe
 
-        # Ejecutamos las búsquedas y obtenemos el número de operaciones
-        _, ops_lineal = busqueda_lineal_con_contador(lista_ordenada, objetivo)
-        _, ops_binaria = busqueda_binaria_con_contador(lista_ordenada, objetivo)
+    # Ejecutamos las búsquedas y obtenemos el número de operaciones
+    _, ops_lineal = busqueda_lineal_con_contador(lista_ordenada, objetivo)
+    _, ops_binaria = busqueda_binaria_con_contador(lista_ordenada, objetivo)
 
-        # Imprimimos una fila de la tabla con los resultados
-        print(f"| {tamaño:<15,d} | {ops_lineal:<20,d} | {ops_binaria:<20,d} | {'Lineal: O(n) vs Binaria: O(log n)':<25} |")
+    # Imprimimos una fila de la tabla con los resultados
+    print(f"| {tamaño:<15,d} | {ops_lineal:<20,d} | {ops_binaria:<20,d} |")
 
-    print(f"{'='*90}")
+print(f"{'='*67}")
 
-    print("\nConclusiones del Análisis Teórico:")
-    print("1. El número de operaciones de la Búsqueda Lineal crece de forma directamente proporcional al tamaño de la lista (O(n)). ")
-    print("2. El número de operaciones de la Búsqueda Binaria crece de forma logarítmica, es decir, muy lentamente (O(log n)). ")
-    print("3. Esto demuestra por qué, si una lista ya está ordenada, la búsqueda binaria es inmensamente más eficiente. ")
+print("\nConclusiones del Análisis Teórico:")
+print("1. El número de operaciones de la Búsqueda Lineal crece de forma directamente proporcional al tamaño de la lista (O(n)).")
+print("2. El número de operaciones de la Búsqueda Binaria crece de forma logarítmica, es decir, muy lentamente (O(log n)).")
+print("3. Esto demuestra por qué, si una lista ya está ordenada, la búsqueda binaria es inmensamente más eficiente.")

@@ -1,7 +1,7 @@
-import time
-import random
-import sys
-from algoritmos import ordenamiento_burbuja, ordenamiento_rapido
+import time # Para medir el tiempo de ejecución de los algoritmos
+import random # Para generar listas de números aleatorios
+import sys # Para ajustar el límite de recursión en Python
+from algoritmos import ordenamiento_burbuja, ordenamiento_rapido # funciones de ordenamiento
 
 # Aumentamos el límite de recursión para que QuickSort no falle en listas grandes.
 sys.setrecursionlimit(20000)
