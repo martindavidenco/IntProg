@@ -5,8 +5,9 @@ Análisis comparativo de algoritmos de búsqueda y ordenamiento implementados en
 Martin Davidenco - Comisión 12
 Pablo Cozzi - Comisión 12
 📘 Tema del Proyecto:
-Algoritmos de Búsqueda y Ordenamiento
+Algoritmos de Búsqueda y Ordenamiento - Ventajas y desventajas de la búsqueda binaria
 
+🎥 Video Explicativo: https://www.youtube.com/watch?v=0_SaU-NGsoQ
 
 🎯 Objetivos
 Los objetivos principales de nuestro análisis fueron:
@@ -43,5 +44,5 @@ python comparacion_ordenamiento.py
 python comparacion_recursividad.py
 
 
-🎥 Video Explicativo: 
+
 
